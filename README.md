@@ -2,7 +2,7 @@
 
 My personal portfolio site, built to showcase my projects and background as I transition into full-stack development.
 
-**Live site:** [your-domain-here.com](https://your-domain-here.com)
+**Live site:** [https://pcapdev-portfolio.vercel.app]
 
 ## About
 
