@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paul C. — Developer Portfolio
 
-## Getting Started
+My personal portfolio site, built to showcase my projects and background as I transition into full-stack development.
 
-First, run the development server:
+**Live site:** [your-domain-here.com](https://your-domain-here.com)
+
+## About
+
+I hold a Ph.D. in cultural anthropology and spent years in public health and academic and user research before moving into software development. This site reflects that combination: I care as much about how people actually use a product as I do about the code that makes it work. I am interestd in linguistics, health, medicine, culture, travel, and economics, and the projects on my portfolio show how I've used code to and the projects on my portfolio show how I've used code to build tools around the questions I actually care about.
+
+## Built With
+
+- [Next.js](https://nextjs.org) (App Router)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- Form handling via [Formspree](https://formspree.io)
+- Deployed on [Vercel](https://vercel.com)
+
+## Features
+
+- Custom animated hero section with gradient effects
+- Responsive project showcase with live demos and GitHub links
+- Smooth scroll navigation
+- Working contact form
+
+## Running Locally
 
 ```bash
+git clone https://github.com/paulcap510/pcapdev-portfolio.git
+cd pcapdev-portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to reach out via the contact form on the live site, or connect with me on [LinkedIn](https://www.linkedin.com/in/pjcapphd510/).****

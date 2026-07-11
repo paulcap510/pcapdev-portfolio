@@ -1,65 +1,67 @@
+"use client";
+
 import Image from "next/image";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <main id="home" className="relative flex min-h-screen items-center justify-center bg-black text-white px-6 sm:px-12 overflow-hidden pt-20 scroll-mt-20">
+        {/* Aurora background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/40 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-cyan-400/30 rounded-full blur-3xl animate-pulse-slow [animation-delay:2s]" />
+          <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-indigo-600/35 rounded-full blur-3xl animate-pulse-slow [animation-delay:4s]" />
+          <div className="absolute bottom-1/4 right-1/3 w-[450px] h-[450px] bg-sky-400/30 rounded-full blur-3xl animate-pulse-slow [animation-delay:1s]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-teal-500/20 rounded-full blur-3xl animate-pulse-slow [animation-delay:3s]" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        <div className="relative z-10 max-w-6xl w-full flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-20">
+          <div className="max-w-xl text-center sm:text-left space-y-6">
+            <p className="text-lg text-zinc-400">Hi there,</p>
+
+            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
+              I am{" "}
+              <span className="inline-block bg-linear-to-r from-blue-400 via-cyan-300 to-sky-500 bg-clip-text text-transparent transition-transform duration-300 hover:scale-105 cursor-default">
+                Paul C.
+              </span>
+            </h1>
+
+            <p className="text-xl">
+              <span className="inline-block text-blue-300 font-medium transition-colors duration-300 hover:text-white cursor-default">
+                Full-Stack Developer
+              </span>
+              {" "}&{" "}
+              <span className="inline-block text-cyan-300 font-medium transition-colors duration-300 hover:text-white cursor-default">
+                UX Researcher
+              </span>
+            </p>
+
+            <p className="text-lg text-zinc-200 leading-relaxed">
+              I build web applications for small businesses, grounded in real user research rather than guesswork.
+            </p>
+          </div>
+
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-blue-400/30 shrink-0 transition-all duration-300 hover:scale-105 hover:border-blue-300/60 hover:shadow-2xl hover:shadow-blue-500/40">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/image1.jpg"
+              alt="Paul C."
+              width={384}
+              height={384}
+              className="w-full h-full object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 bg-blue-500/25 mix-blend-color" />
+          </div>
         </div>
       </main>
-    </div>
+
+      <About />
+      <Projects />
+      <Contact />
+    </>
   );
 }
