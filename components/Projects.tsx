@@ -1,7 +1,10 @@
+"use clinet";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
 import { projects } from "@/lib/projects";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const featured = projects.filter((p) => p.featured);
@@ -9,11 +12,32 @@ export default function Projects() {
   return (
     <section id="projects" className="relative bg-black text-white px-6 sm:px-12 py-32 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-16">
-          Projects
-        </h2>
+        <motion.div
+          initial={{ x: -80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-16"
+        >
+          <h2 className="text-5xl sm:text-6xl font-bold tracking-tight">
+            Projects
+          </h2>
+          <div className="w-24 h-1 bg-blue-400 mt-4 mb-4 rounded-full" />
+          <p className="text-xl text-cyan-300 font-medium">
+            Check out all my projects below.
+          </p>
 
-        <div className="grid sm:grid-cols-2 gap-8">
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="grid sm:grid-cols-2 gap-8"
+        >
+
+
           {featured.map((project) => (
 <div
   key={project.title}
@@ -62,7 +86,8 @@ export default function Projects() {
   </div>
 </div>
           ))}
-        </div>
+                  </motion.div>
+
 
         <div className="flex justify-center mt-14">
           <Link href="/projects" className="flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-colors">

@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import {
   SiPython, SiFastapi, SiJavascript, SiReact, SiNodedotjs, SiExpress,
   SiHtml5, SiCss, SiTailwindcss, SiBootstrap, SiSqlalchemy,
@@ -29,20 +33,45 @@ export default function About() {
   return (
     <section id="about" className="relative bg-black text-white px-6 sm:px-12 py-32 scroll-mt-20">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
+        <motion.h2
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-5xl sm:text-6xl font-bold tracking-tight mb-6"
+        >
           Behind the Code
-        </h2>
+        </motion.h2>
+        {/* <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
+          Behind the Code
+        </h2> */}
 
-        <p className="text-lg text-zinc-200 leading-relaxed max-w-2xl mb-16">
+        <motion.p
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          className="text-lg text-zinc-200 leading-relaxed max-w-2xl mb-16"
+        >
+
+
+        {/* <p className="text-lg text-zinc-200 leading-relaxed max-w-2xl mb-16"> */}
           I hold a Ph.D. in cultural anthropology and spent years in public
           health research before moving into software development. That
           background shapes how I build. I care as much about how people
           actually use a product as I do about the code underneath it. These
           days I&apos;m focused on full-stack development, building tools
           that are grounded in real user behavior.
-        </p>
+        </motion.p>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"
+        >
+        {/* <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"> */}
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
@@ -61,7 +90,9 @@ export default function About() {
               </div>
             );
           })}
-        </div>
+
+        </motion.div>
+
       </div>
     </section>
   );

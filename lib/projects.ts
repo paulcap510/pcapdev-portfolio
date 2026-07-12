@@ -6,6 +6,7 @@ export type Project = {
   demoUrl: string;
   githubUrl: string;
   featured: boolean;
+  category: "Web Applications" | "Research & Data Tools" | "APIs & Automation" | "Other";
 };
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     demoUrl: "https://schengen-visa-frontend.onrender.com/",
     githubUrl: "https://github.com/paulcap510/schengen-visa-v7/",
     featured: true,
+    category: "APIs & Automation",
   },
   {
     title: "Searchable Academic Database",
@@ -28,6 +30,7 @@ export const projects: Project[] = [
     demoUrl: "https://ae-database.onrender.com/",
     githubUrl: "",
     featured: false,
+    category: "Research & Data Tools",
   },
 {
   title: "Sky Check — Personalized Outdoor Conditions Dashboard",
@@ -38,5 +41,6 @@ export const projects: Project[] = [
   demoUrl: "https://aqi-weather-dashboard.onrender.com/",
   githubUrl: "https://github.com/paulcap510/aqi_weather_dashboard",
   featured: true,
+  category: "Web Applications",
 },
 ];

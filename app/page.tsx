@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -19,7 +20,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-6xl w-full flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-20">
-          <div className="max-w-xl text-center sm:text-left space-y-6">
+          <motion.div
+            initial={{ x: -80, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-xl text-center sm:text-left space-y-6"
+          >
             <p className="text-lg text-zinc-400">Hi there,</p>
 
             <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
@@ -42,9 +48,14 @@ export default function Home() {
             <p className="text-lg text-zinc-200 leading-relaxed">
               I build web applications for small businesses, grounded in real user research rather than guesswork.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-blue-400/30 shrink-0 transition-all duration-300 hover:scale-105 hover:border-blue-300/60 hover:shadow-2xl hover:shadow-blue-500/40">
+          <motion.div
+            initial={{ x: 80, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-blue-400/30 shrink-0 transition-colors duration-300 hover:border-blue-300/60 hover:shadow-2xl hover:shadow-blue-500/40"
+            >
             <Image
               src="/image1.jpg"
               alt="Paul C."
@@ -55,7 +66,7 @@ export default function Home() {
               priority
             />
             <div className="absolute inset-0 bg-blue-500/25 mix-blend-color" />
-          </div>
+          </motion.div>
         </div>
       </main>
 

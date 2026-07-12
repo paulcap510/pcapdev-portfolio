@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FiSend, FiCheckCircle, FiClock } from "react-icons/fi";
 
 export default function Contact() {
@@ -33,14 +34,35 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative bg-black text-white px-6 sm:px-12 py-32 scroll-mt-20 overflow-hidden">
-      {/* Aurora background layer */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/30 rounded-full blur-3xl animate-pulse-slow" />
+          <motion.div
+    animate={{ x: [0, 150, -80, 0], y: [0, -100, 60, 0] }}
+    transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/30 rounded-full blur-3xl"
+  />
+  <motion.div
+    animate={{ x: [0, -130, 80, 0], y: [0, 90, -60, 0] }}
+    transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-cyan-400/25 rounded-full blur-3xl"
+  />
+  <motion.div
+    animate={{ x: [0, 100, -110, 0], y: [0, -80, 90, 0] }}
+    transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-3xl"
+  />
+
+        {/* <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/30 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-cyan-400/25 rounded-full blur-3xl animate-pulse-slow [animation-delay:2s]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-3xl animate-pulse-slow [animation-delay:4s]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-3xl animate-pulse-slow [animation-delay:4s]" /> */}
       </div>
 
-      <div className="relative z-10 max-w-xl mx-auto">
+      <motion.div
+        initial={{ x: -120, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ type: "spring", stiffness: 120, damping: 12 }}
+        className="relative z-10 max-w-xl mx-auto"
+      >
         <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
           <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-sky-500 bg-clip-text text-transparent">
             Get In Touch
@@ -125,7 +147,7 @@ export default function Contact() {
             </div>
           </form>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 }
