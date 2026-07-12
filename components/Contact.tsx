@@ -68,7 +68,7 @@ export default function Contact() {
             Get In Touch
           </span>
         </h2>
-        <p className="text-base text-zinc-400 mb-10">
+        <p className="text-base text-zinc-200 mb-10">
           Have a project in mind or just want to say hi? Send me a message.
         </p>
 
@@ -140,7 +140,7 @@ export default function Contact() {
                 {status === "submitting" ? "Sending..." : "Send Message"}
               </button>
 
-              <p className="flex items-center gap-1.5 text-xs text-zinc-500">
+              <p className="flex items-center gap-1.5 text-xs text-zinc-200">
                 <FiClock size={13} />
                 Usually respond within 24 hours
               </p>
