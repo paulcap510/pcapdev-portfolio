@@ -112,13 +112,12 @@ export default function ExperiencePage() {
           {roles.map((role, index) => (
             <motion.div
               key={role.title + role.place}
-              initial={{ y: 50, opacity: 0 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ y: 0, opacity: 1 }}
               whileHover={{ y: -4 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-              className="group rounded-3xl bg-white/[0.03] border border-white/10 p-6 sm:p-8 transition-all duration-300 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10"
-            >
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, ease: "easeOut"}}
+              className="group rounded-3xl bg-white/[0.03] border border-white/10 p-6 sm:p-8 transition-colors duration-300 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10"            >
               <div className="flex items-start justify-between flex-wrap gap-2 mb-6">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-400/10 border border-blue-400/20 shrink-0 transition-transform duration-300 group-hover:scale-110">
