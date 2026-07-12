@@ -114,9 +114,10 @@ export default function ExperiencePage() {
               key={role.title + role.place}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
+              whileHover={{ y: -4 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-              className="group rounded-3xl bg-white/[0.03] border border-white/10 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10"
+              className="group rounded-3xl bg-white/[0.03] border border-white/10 p-6 sm:p-8 transition-all duration-300 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10"
             >
               <div className="flex items-start justify-between flex-wrap gap-2 mb-6">
                 <div className="flex items-center gap-4">
