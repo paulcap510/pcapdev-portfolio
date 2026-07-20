@@ -18,7 +18,7 @@ export const projects: Project[] = [
     tags: ["React", "Node", "Selenium", "BeautifulSoup", "Render"],
     demoUrl: "https://schengen-visa-frontend.onrender.com/",
     githubUrl: "https://github.com/paulcap510/schengen-visa-v7/",
-    featured: true,
+    featured: false,
     category: "APIs & Automation",
   },
   {
@@ -40,6 +40,17 @@ export const projects: Project[] = [
   tags: ["Python", "FastAPI", "Jinja2", "REST APIs", "Render"],
   demoUrl: "https://aqi-weather-dashboard.onrender.com/",
   githubUrl: "https://github.com/paulcap510/aqi_weather_dashboard",
+  featured: true,
+  category: "Web Applications",
+},
+{
+  title: "Hot Hotels — Full-Stack Booking Platform",
+  description:
+    "A hotel and experiences booking platform in the style of Hotels.com, built end-to-end with FastAPI and server-rendered Jinja2 templates. Supports session-based auth, real-time room availability (computed from confirmed bookings rather than a stored flag, to avoid drift), a host dashboard for managing properties and experience listings, and a request-based booking flow for experiences where hosts confirm or decline guest requests. Originally built on SQLite for rapid iteration, then migrated to PostgreSQL — including a custom data-migration script preserving all relational integrity — as the schema and feature set matured.",
+  image: "/image5-hothotels.png",
+  tags: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "Jinja2", "Render"],
+  demoUrl: "https://hotel-booking-fastapi.onrender.com/",
+  githubUrl: "https://github.com/paulcap510/hotel-booking-fastapi",
   featured: true,
   category: "Web Applications",
 },
